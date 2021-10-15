@@ -2,14 +2,19 @@ package com.application.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.application.model.Livre;
+import com.application.repo.LivreRepo;
 import com.application.service.LivreService;
 
 @Service
 public class LivreServiceImpl implements LivreService{
 
+	@Autowired
+	private LivreRepo repo;
+	
 	@Override
 	public List<Livre> getLivres() {
 		// TODO Auto-generated method stub
