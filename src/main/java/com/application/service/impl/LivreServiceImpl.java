@@ -9,7 +9,7 @@ import com.application.model.Livre;
 import com.application.repo.LivreRepo;
 import com.application.service.LivreService;
 
-@Service
+@Service("LivreService")
 public class LivreServiceImpl implements LivreService{
 
 	@Autowired
@@ -18,31 +18,32 @@ public class LivreServiceImpl implements LivreService{
 	@Override
 	public List<Livre> getLivres() {
 		// TODO Auto-generated method stub
-		return null;
+		return repo.findAll();
 	}
 
 	@Override
 	public Livre getLivreById(long id) {
 		// TODO Auto-generated method stub
-		return null;
+		return repo.findById(id).get();
 	}
 
-	@Override
-	public int postLivre(Livre livre) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 	@Override
 	public void deleteById(long id) {
 		// TODO Auto-generated method stub
-		
+		repo.deleteById(id);
 	}
 
 	@Override
-	public Livre updateLivre(Livre livre) {
+	public void updateLivre(Livre livre) {
 		// TODO Auto-generated method stub
-		return null;
+		repo.save(livre);
+	}
+
+	@Override
+	public void postLivre(Livre livre) {
+		// TODO Auto-generated method stub
+		repo.save(livre);
 	}
 
 }

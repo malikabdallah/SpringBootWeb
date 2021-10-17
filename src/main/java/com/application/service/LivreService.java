@@ -9,11 +9,11 @@ public interface LivreService {
 	
 	Livre getLivreById(long id);
 	
-	int postLivre(Livre livre);
+	void postLivre(Livre livre);
 	
 	void deleteById(long id);
 	
-	Livre updateLivre(Livre livre);
+	void updateLivre(Livre livre);
 	
 	
 }

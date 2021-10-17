@@ -9,7 +9,7 @@ import com.application.model.Type;
 import com.application.repo.TypeRepo;
 import com.application.service.TypeService;
 
-@Service
+@Service("TypeService")
 public class TypeServiceImpl implements TypeService {
 
 	@Autowired
@@ -17,7 +17,7 @@ public class TypeServiceImpl implements TypeService {
 	
 	public List<Type> getTypes() {
 		// TODO Auto-generated method stub
-		return null;
+		return repo.findAll();
 	}
 
 	
