@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head th:replace="fragments/head.html">
+    
+  </head>
+
+  <body>
+
+    <header th:replace="fragments/header.html">
+      
+      
+    </header>
+
+    <div id="main" class="shell">
+    <!-- Sidebar -->
+  
+
+    <!-- End Sidebar -->
+    <!-- Content -->
+    <div id="content">
+        <!-- Products -->
+        <div class="products">
+            <h3>Choisisez parmi notre colelction de livre</h3>
+
+            <div th:if="${!livres.empty}">
+                <div th:each="livre: ${livres}" th:id="'id_' + ${livre.id}">
+                    <div style="width: 25%; float: left; margin-bottom: 15px;"  >
+
+                        <img style="height:150px;width:150px"  th:src="@{'/livres/' + ${livre.image}}">
+                        <div class="text-center" th:text="${livre.titre}"></div>
+
+                        <a>consulter</a>
+                        <br/>
+
+
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- End Products -->
+        </div>
+        <div class="cl">&nbsp;</div>
+        <!-- Best-sellers -->
+
+
+
+
+
+
+
+        <!-- End Best-sellers -->
+    </div>
+
+
+    <!-- End Content -->
+    <div class="cl">&nbsp;</div>
+</div>
+
+    <footer class="text-muted" th:replace="fragments/footer.html">
+      
+    </footer>
+
+  
+   </body>
+</html>
