@@ -17,27 +17,9 @@ import com.application.repo.TypeRepo;
 import com.application.service.*;
 @Controller
 @RequestMapping("/livres")
-public class UserLivreController {
-	
+public class HomeController {
 	
 
-	@Autowired
-	private LivreService LivreService;
-	
-	
-	@Autowired
-	private TypeRepo typesRepo;
-	
-	
-	
-	@GetMapping()
-	public String indexLivre(Model model) {
-		List<Livre>livres=this.LivreService.getLivres();
-		model.addAttribute("livres", livres);
-		
-		return "user/index";
-		
-	}
 	
 
 }

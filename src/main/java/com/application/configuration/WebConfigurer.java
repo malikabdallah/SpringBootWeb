@@ -10,7 +10,7 @@ public class WebConfigurer implements WebMvcConfigurer {
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		// TODO Auto-generated method stub
-		//registry.addViewController("/livres").setViewName("index");
+		registry.addViewController("/livres").setViewName("index");
 	}
 
 }

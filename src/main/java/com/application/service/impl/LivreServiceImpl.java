@@ -9,11 +9,11 @@ import com.application.model.Livre;
 import com.application.repo.LivreRepo;
 import com.application.service.LivreService;
 
-@Service("LivreService")
+@Service
 public class LivreServiceImpl implements LivreService{
 
-	@Autowired
-	private LivreRepo repo;
+	 @Autowired
+	 private LivreRepo repo;
 	
 	@Override
 	public List<Livre> getLivres() {
@@ -27,23 +27,26 @@ public class LivreServiceImpl implements LivreService{
 		return repo.findById(id).get();
 	}
 
+	@Override
+	public void postLivre(Livre livre) {
+		// TODO Auto-generated method stub
+		repo.save(livre);
+	}
 
 	@Override
 	public void deleteById(long id) {
 		// TODO Auto-generated method stub
 		repo.deleteById(id);
+		
 	}
 
 	@Override
 	public void updateLivre(Livre livre) {
 		// TODO Auto-generated method stub
 		repo.save(livre);
+		
 	}
 
-	@Override
-	public void postLivre(Livre livre) {
-		// TODO Auto-generated method stub
-		repo.save(livre);
-	}
+	
 
 }
