@@ -259,3 +259,4 @@ INSERT INTO `livre` (`id`, `annee`, `description`, `image`, `titre`, `type_id`) 
 INSERT INTO `livre` (`id`, `annee`, `description`, `image`, `titre`, `type_id`) VALUES
 
 (null, 1990, 'DB tome 42', 'dbtome42.jpg', 'tome numero 42', 1);
+
